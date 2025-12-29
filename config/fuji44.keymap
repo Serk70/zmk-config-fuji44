@@ -55,10 +55,10 @@
 
         def {
             bindings = <
-&mt ESCAPE GRAVE  &kp Q  &kp W          &kp E        &kp R            &kp T                   &kp Y        &kp U            &kp I        &kp O      &kp P     &kp LEFT_BRACKET
-&tog 3            &kp A  &kp S          &kp D        &kp F            &kp G                   &kp H        &kp J            &kp K        &kp L      &kp SEMI  &kp SQT
-&kp LCTRL         &kp Z  &kp X          &kp C        &kp V            &kp B                   &kp N        &kp M            &kp COMMA    &kp DOT    &kp FSLH  &mt LCTRL RIGHT_BRACKET
-                         &kp BACKSLASH  &lt 2 ENTER  &lt 4 BACKSPACE  &mt LEFT_SHIFT SPACE    &lt 3 SPACE  &lt 1 BACKSPACE  &lt 5 ENTER  &kp MINUS
+&td_grv_esc  &kp Q  &kp W          &kp E        &kp R            &kp T                   &kp Y        &kp U            &kp I        &kp O      &kp P     &kp LEFT_BRACKET
+&tog 3       &kp A  &kp S          &kp D        &kp F            &kp G                   &kp H        &kp J            &kp K        &kp L      &kp SEMI  &kp SQT
+&kp LCTRL    &kp Z  &kp X          &kp C        &kp V            &kp B                   &kp N        &kp M            &kp COMMA    &kp DOT    &kp FSLH  &mt LCTRL RIGHT_BRACKET
+                    &kp BACKSLASH  &lt 2 ENTER  &lt 4 BACKSPACE  &mt LEFT_SHIFT SPACE    &lt 3 SPACE  &lt 1 BACKSPACE  &lt 5 ENTER  &kp MINUS
             >;
         };
 
@@ -100,10 +100,10 @@
 
         Func {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F6  &kp F7           &kp F8     &kp F9         &kp F10        &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &none   &sk RIGHT_SHIFT  &sk RCTRL  &sk RIGHT_ALT  &sk RIGHT_GUI  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans    &kp F1  &kp F2           &kp F3     &kp F4         &kp F5         &none
-                &trans  &mo 6   &trans  &trans    &trans  &trans           &trans     &trans
+&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &kp F6  &kp F7           &kp F8     &kp F9         &kp F10        &kp F11
+&trans      &trans  &trans  &trans  &trans  &trans    &none   &sk RIGHT_SHIFT  &sk RCTRL  &sk RIGHT_ALT  &sk RIGHT_GUI  &kp F12
+&trans      &trans  &trans  &trans  &trans  &trans    &kp F5  &kp F4           &kp F3     &kp F2         &kp F1         &none
+                    &trans  &mo 6   &trans  &trans    &trans  &trans           &trans     &trans
             >;
         };
 
