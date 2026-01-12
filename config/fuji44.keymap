@@ -112,7 +112,7 @@
             bindings = <
 &kp ESCAPE   &kp KP_SLASH  &kp NUMBER_6  &kp N5        &kp NUMBER_4  &kp KP_MULTIPLY    &none           &kp INS          &kp DELETE        &kp RC(PAUSE_BREAK)  &none          &to 0
 &kp KP_PLUS  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp NUMBER_0  &kp KP_SUBTRACT    &kp UNDERSCORE  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LALT             &kp RIGHT_WIN  &kp ENTER
-&kp EQUAL    &kp COMMA     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERIOD         &tog 2          &kp EQUAL        &kp LESS_THAN     &kp GREATER_THAN     &kp SLASH      &kp RCTRL
+&kp EQUAL    &kp COMMA     &kp N9        &kp NUMBER_8  &kp N7        &kp PERIOD         &tog 2          &kp EQUAL        &kp LESS_THAN     &kp GREATER_THAN     &kp SLASH      &kp RCTRL
                            &none         &trans        &trans        &trans             &trans          &kp BACKSPACE    &sl 6             &none
             >;
         };
