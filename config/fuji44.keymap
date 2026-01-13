@@ -96,13 +96,43 @@
         };
     };
 
+    macros {
+        mDOT: mDOT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_4 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "MDOT";
+        };
+
+        mCOMMA: mCOMMA {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_4 &kp KP_NUMBER_4>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "MCOMMA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         def {
             bindings = <
 &ht_tap_prior ESCAPE GRAVE          &kp Q  &kp W        &kp E        &kp R            &kp T                   &kp Y        &kp U            &kp I        &kp O        &kp P     &kp LEFT_BRACKET
-&tog 3                              &kp A  &kp S        &kp D        &kp F            &kp G                   &kp H        &kp J            &kp K        &kp L        &kp SEMI  &kp SQT
+&to 3                               &kp A  &kp S        &kp D        &kp F            &kp G                   &kp H        &kp J            &kp K        &kp L        &kp SEMI  &kp SQT
 &ht_tap_prior LCTRL LC(LEFT_SHIFT)  &kp Z  &kp X        &kp C        &kp V            &kp B                   &kp N        &kp M            &kp COMMA    &kp DOT      &kp FSLH  &ht_tap_prior LCTRL RIGHT_BRACKET
                                            &key_repeat  &lt 2 ENTER  &lt 4 BACKSPACE  &mt LEFT_SHIFT SPACE    &lt 3 SPACE  &lt 1 BACKSPACE  &lt 5 ENTER  &key_repeat
             >;
@@ -110,18 +140,18 @@
 
         num {
             bindings = <
-&kp ESCAPE   &kp KP_SLASH  &kp NUMBER_6  &kp N5        &kp NUMBER_4  &kp KP_MULTIPLY    &none           &kp INS          &kp DELETE        &kp RC(PAUSE_BREAK)  &none          &to 0
-&kp KP_PLUS  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp NUMBER_0  &kp KP_SUBTRACT    &kp UNDERSCORE  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LALT             &kp RIGHT_WIN  &kp ENTER
-&kp EQUAL    &kp COMMA     &kp N9        &kp NUMBER_8  &kp N7        &kp PERIOD         &tog 2          &kp EQUAL        &kp LESS_THAN     &kp GREATER_THAN     &kp SLASH      &kp RCTRL
-                           &none         &trans        &trans        &trans             &trans          &kp BACKSPACE    &sl 6             &none
+&kp ESCAPE   &kp KP_MULTIPLY  &kp NUMBER_6  &kp N5        &kp NUMBER_4  &kp KP_SLASH       &none           &kp INS          &kp DELETE        &kp RC(PAUSE_BREAK)  &none          &to 0
+&kp KP_PLUS  &kp NUMBER_3     &kp NUMBER_2  &kp NUMBER_1  &kp NUMBER_0  &kp KP_SUBTRACT    &kp UNDERSCORE  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LALT             &kp RIGHT_WIN  &kp ENTER
+&kp EQUAL    &mCOMMA          &kp N9        &kp NUMBER_8  &kp N7        &mDOT              &to 2           &kp EQUAL        &kp LESS_THAN     &kp GREATER_THAN     &kp SLASH      &kp RCTRL
+                              &none         &trans        &trans        &trans             &trans          &kp BACKSPACE    &sl 6             &none
             >;
         };
 
         F15_media_numpad {
             bindings = <
-&kp C_MUTE         &kp F1         &kp F2            &kp F3     &kp F4           &kp F5              &kp KP_NUMLOCK  &kp KP_N7      &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MINUS  &kp KP_DIVIDE
-&kp C_VOL_UP       &sk LEFT_GUI   &sk LEFT_ALT      &sk LCTRL  &sk LEFT_SHIFT   &kp C_PLAY_PAUSE    &kp ESCAPE      &kp KP_N4      &kp KP_N5        &kp KP_NUMBER_6  &kp KP_PLUS   &kp KP_MULTIPLY
-&kp C_VOLUME_DOWN  &kp LG(LS(T))  &kp LG(KP_MINUS)  &none      &kp LG(KP_PLUS)  &kp LC(LS(T))       &kp E           &kp KP_N1      &kp KP_N2        &kp KP_N3        &kp KP_DOT    &kp EQUAL
+&kp C_MUTE         &kp F1         &kp F2            &kp F3     &kp F4           &kp F5              &kp KP_DIVIDE   &kp KP_N7      &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MULTIPLY  &kp ESCAPE
+&kp C_VOL_UP       &sk LEFT_GUI   &sk LEFT_ALT      &sk LCTRL  &sk LEFT_SHIFT   &kp C_PLAY_PAUSE    &kp KP_MINUS    &kp KP_N4      &kp KP_N5        &kp KP_NUMBER_6  &kp KP_PLUS      &kp EQUAL
+&kp C_VOLUME_DOWN  &kp LG(LS(T))  &kp LG(KP_MINUS)  &none      &kp LG(KP_PLUS)  &kp LC(LS(T))       &kp KP_NUMLOCK  &kp KP_N1      &kp KP_N2        &kp KP_N3        &kp KP_DOT       &kp E
                                   &none             &kp ENTER  &trans           &kp SPACE           &lt 3 KP_N0     &kp BACKSPACE  &lt 6 KP_ENTER   &none
             >;
         };
@@ -129,7 +159,7 @@
         nav {
             bindings = <
 &kp ESCAPE  &none         &none         &kp LA(LEFT)  &kp LA(RIGHT)   &kp LC(Y)    &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END          &msc SCRL_UP     &to 0
-&tog 3      &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp TAB      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &msc SCRL_DOWN   &kp ENTER
+&to 0       &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp TAB      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &msc SCRL_DOWN   &kp ENTER
 &kp LC(A)   &none         &kp LC(X)     &kp LC(C)     &kp LC(V)       &kp LC(Z)    &none          &msc SCRL_LEFT  &kp LS(F10)     &msc SCRL_RIGHT  &kp LC(KP_PLUS)  &kp LC(KP_MINUS)
                           &none         &kp ENTER     &trans          &trans       &kp SPACE      &kp BACKSPACE   &trans          &none
             >;
@@ -138,7 +168,7 @@
         symb {
             bindings = <
 &to 0      &none          &kp F2        &kp DELETE   &kp INSERT      &kp LC(Y)    &kp AMPERSAND   &kp CARET             &kp EXCLAMATION        &kp AT_SIGN       &kp DOLLAR    &kp HASH
-&tog 1     &kp LEFT_GUI   &kp LEFT_ALT  &kp LCTRL    &kp LEFT_SHIFT  &kp TAB      &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON     &kp DOUBLE_QUOTES
+&to 1      &kp LEFT_GUI   &kp LEFT_ALT  &kp LCTRL    &kp LEFT_SHIFT  &kp TAB      &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON     &kp DOUBLE_QUOTES
 &kp LC(A)  &kp LG(LS(S))  &kp LC(X)     &kp LC(INS)  &kp LS(INS)     &kp LC(Z)    &kp BACKSLASH   &kp EQUAL             &kp LESS_THAN          &kp GREATER_THAN  &kp QUESTION  &kp PIPE
                           &none         &sl 6        &trans          &trans       &kp SPACE       &kp LC(BACKSPACE)     &kp LC(DEL)            &kp UNDERSCORE
             >;
