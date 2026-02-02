@@ -153,19 +153,19 @@
 
         num {
             bindings = <
-&kp ESCAPE   &kp KP_MULTIPLY  &kp NUMBER_6  &kp N5        &kp NUMBER_4  &kp KP_SLASH       &none           &kp INS          &kp DELETE        &kp RC(PAUSE_BREAK)  &none          &to 0
-&kp KP_PLUS  &kp NUMBER_3     &kp NUMBER_2  &kp NUMBER_1  &kp NUMBER_0  &kp KP_SUBTRACT    &kp UNDERSCORE  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LALT             &kp RIGHT_WIN  &kp ENTER
-&kp EQUAL    &mCOMMA          &kp N9        &kp NUMBER_8  &kp N7        &mDOT              &to 2           &kp EQUAL        &kp LESS_THAN     &kp GREATER_THAN     &kp SLASH      &kp RCTRL
-                              &none         &trans        &trans        &trans             &trans          &kp BACKSPACE    &sl 6             &none
+&kp ESCAPE   &kp KP_DIVIDE  &kp NUMBER_6  &kp N5        &kp NUMBER_4  &kp LS(KP_MULTIPLY)    &none      &kp INS          &kp DELETE        &kp RC(PAUSE_BREAK)  &none          &to 0
+&kp KP_PLUS  &kp NUMBER_3   &kp NUMBER_2  &kp NUMBER_1  &kp NUMBER_0  &kp KP_SUBTRACT        &kp EQUAL  &kp RIGHT_SHIFT  &kp LEFT_CONTROL  &kp LALT             &kp RIGHT_WIN  &kp ENTER
+&kp EQUAL    &mCOMMA        &kp N9        &kp NUMBER_8  &kp N7        &mDOT                  &to 2      &kp UNDERSCORE   &kp LESS_THAN     &kp GREATER_THAN     &kp SLASH      &kp RCTRL
+                            &none         &trans        &trans        &trans                 &trans     &kp BACKSPACE    &sl 6             &none
             >;
         };
 
         F15_media_numpad {
             bindings = <
-&kp C_MUTE         &kp F1         &kp F2            &kp F3     &kp F4           &kp F5           &kp KP_DIVIDE   &kp KP_N7      &kp KP_NUMBER_8  &kp KP_N9        &kp KP_MULTIPLY  &kp ESCAPE
-&kp C_VOL_UP       &sk LEFT_GUI   &sk LEFT_ALT      &sk LCTRL  &sk LEFT_SHIFT   &mPlayStop       &kp KP_MINUS    &kp KP_N4      &kp KP_N5        &kp KP_NUMBER_6  &kp KP_PLUS      &kp EQUAL
-&kp C_VOLUME_DOWN  &kp LG(LS(T))  &kp LG(KP_MINUS)  &none      &kp LG(KP_PLUS)  &kp LC(LS(T))    &kp KP_NUMLOCK  &kp KP_N1      &kp KP_N2        &kp KP_N3        &kp KP_DOT       &kp E
-                                  &none             &kp ENTER  &trans           &kp SPACE        &lt 3 KP_N0     &kp BACKSPACE  &lt 6 KP_ENTER   &none
+&kp C_MUTE         &kp F1         &kp F2            &kp F3     &kp F4           &kp F5           &kp KP_MULTIPLY  &kp KP_N7      &kp KP_NUMBER_8  &kp KP_N9        &kp KP_DIVIDE  &kp ESCAPE
+&kp C_VOL_UP       &sk LEFT_GUI   &sk LEFT_ALT      &sk LCTRL  &sk LEFT_SHIFT   &mPlayStop       &kp KP_MINUS     &kp KP_N4      &kp KP_N5        &kp KP_NUMBER_6  &kp KP_PLUS    &kp EQUAL
+&kp C_VOLUME_DOWN  &kp LG(LS(T))  &kp LG(KP_MINUS)  &none      &kp LG(KP_PLUS)  &kp LC(LS(T))    &kp KP_NUMLOCK   &kp KP_N1      &kp KP_N2        &kp KP_N3        &kp KP_DOT     &kp E
+                                  &none             &kp ENTER  &trans           &kp SPACE        &lt 3 KP_N0      &kp BACKSPACE  &lt 6 KP_ENTER   &none
             >;
         };
 
@@ -180,16 +180,16 @@
 
         symb {
             bindings = <
-&to 0      &none          &kp F2        &kp DELETE   &kp INSERT      &kp LC(Y)    &kp AMPERSAND   &kp CARET             &kp EXCLAMATION        &kp AT_SIGN       &kp DOLLAR    &kp HASH
-&to 1      &kp LEFT_GUI   &kp LEFT_ALT  &kp LCTRL    &kp LEFT_SHIFT  &kp TAB      &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON     &kp DOUBLE_QUOTES
-&kp LC(A)  &kp LG(LS(S))  &kp LC(X)     &kp LC(INS)  &kp LS(INS)     &kp LC(Z)    &kp BACKSLASH   &kp EQUAL             &kp LESS_THAN          &kp GREATER_THAN  &kp QUESTION  &kp PIPE
-                          &none         &sl 6        &trans          &trans       &kp SPACE       &kp LC(BACKSPACE)     &kp LC(DEL)            &kp UNDERSCORE
+&to 0      &none          &kp F2        &kp DELETE   &kp INSERT      &kp LC(Y)    &kp AMPERSAND  &kp CARET             &kp EXCLAMATION        &kp AT_SIGN       &kp DOLLAR    &kp HASH
+&to 1      &kp LEFT_GUI   &kp LEFT_ALT  &kp LCTRL    &kp LEFT_SHIFT  &kp TAB      &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT       &kp COLON     &kp DOUBLE_QUOTES
+&kp LC(A)  &kp LG(LS(S))  &kp LC(X)     &kp LC(INS)  &kp LS(INS)     &kp LC(Z)    &kp BACKSLASH  &kp UNDER             &kp LESS_THAN          &kp GREATER_THAN  &kp QUESTION  &kp PIPE
+                          &none         &sl 6        &trans          &trans       &kp SPACE      &kp LC(BACKSPACE)     &kp LC(DEL)            &kp UNDERSCORE
             >;
         };
 
         Func {
             bindings = <
-&kp ESCAPE  &trans  &trans  &trans  &trans  &trans    &kp F6  &kp F7           &kp F8     &kp F9         &kp F10        &kp F11
+&kp ESCAPE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7           &kp F8     &kp F9         &kp F10        &kp F11
 &trans      &trans  &trans  &trans  &trans  &trans    &none   &sk RIGHT_SHIFT  &sk RCTRL  &sk RIGHT_ALT  &sk RIGHT_GUI  &kp F12
 &trans      &trans  &trans  &trans  &trans  &trans    &kp F5  &kp F4           &kp F3     &kp F2         &kp F1         &none
                     &trans  &mo 6   &trans  &trans    &trans  &trans           &trans     &trans
